@@ -1,50 +1,86 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Student Profile</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
 
-    http://www.apache.org/licenses/LICENSE-2.0
+<header>
+    <div class="profile-frame">
+        <img src="img/img.png" alt=" ">
+    </div>
+    <h1>Abegail P. Cailing</h1>
+    <div class="subtitle">Personal Profile</div>
 
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
-            https://cordova.apache.org/docs/en/latest/
-        Some notes:
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <meta name="color-scheme" content="light dark">
-        <link rel="stylesheet" href="css/index.css">
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+
+    <main>
+        <section id="about" class="content-card">
+            <h2 class="section-title">About Myself</h2>
+            <p>
+                I am Abegail P. Cailing, a 20yrs old, Information Technology student at Xavier University. I completed my elementary education at Binitinan Elementary School and graduated from St. Rita's College of Balingasag for my junior and senior high school years. Originally I started as a Computer Science student then I later shifted to Information Technology.
+            </p>
+            <br>
+            <p>
+                My college journey has been a time of exploring and discovering what I really want to pursue. Then I developed an interest in web designing. So, I decided to shift to BS Information Technology to become more closer to what I really want to pursue and to further develop my knowledge and skills. Aspiring to be a Web Developer.
+            </p>
+        </section>
+
+        <section id="skills" class="content-card">
+            <h2 class="section-title">Skills</h2>
+            <p>I am a 3rd-year IT student with basic knowledge of HTML, CSS, and JavaScript. I have learned how to create simple web pages, work with basic databases and SQL, and use tools like Git, Packet Tracer, PyCharm, and VS Code for my school projects. I am still improving my coding skills and learning more about different areas of Information Technology.</p>
+        </section>
+    </main>
+
+    <aside id="contact">
+        <div class="sidebar-widget">
+            <h3>Contact Me</h3>
+            <div class="subtitle"></div>
+
+            <form class="contact-form">
+                <ul class="sidebar-list">
+                    <li><strong>ID:</strong> 20240030884</li>
+                    <li><strong>Phone Number:</strong> 09692812840</li>
+                    <li><strong>Email:</strong> 20240030884@my.xu.edu.ph</li>
+
+                    <!-- UPDATED CLASS AND WRAPPER -->
+                    <li class="form-subtitle">You can send me a message here.</li>
+
+                    <li class="field">
+                        <label for="email"><strong>Email:</strong></label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </li>
+
+                    <li class="field">
+                        <label for="message"><strong>Message:</strong></label>
+                        <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
+                    </li>
+                </ul>
+
+                <div class="field-btn">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
         </div>
-        <script src="cordova.js"></script>
-        <script src="js/index.js"></script>
-    </body>
+    </aside>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Abegail P. Cailing. All rights reserved.</p>
+</footer>
+
+</body>
 </html>
