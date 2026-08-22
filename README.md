@@ -1,9 +1,5 @@
-# Activity 1 - Apache Cordova App
+# Activity 2 - Basic Student Profile
 
-## Installing Cordova Screenshot
+## Basic Student Profile
 
-![Screenshot1](screenshot1.png)
-
-## Emulate Project Screenshot
-
-![Screenshot2](screenshot2.png)
+![Screenshot3](Screenshot3.png)
