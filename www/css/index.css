@@ -11,18 +11,16 @@ body {
   padding: 20px;
 }
 
-/* SMOOTH SCROLLING */
 html {
   scroll-behavior: smooth;
 }
 
-section[id], 
-aside[id], 
+section[id],
+aside[id],
 div[id] {
   scroll-margin-top: 25px;
 }
 
-/* HEADER & PROFILE PICTURE FIX */
 header {
   background: #382a56;
   color: #fff;
@@ -125,8 +123,8 @@ main, aside {
   margin-bottom: 12px;
 }
 
-.sidebar-list { 
-  list-style: none; 
+.sidebar-list {
+  list-style: none;
 }
 
 .sidebar-list li {
@@ -166,7 +164,6 @@ main, aside {
   min-height: 80px;
 }
 
-/* FOOTER & RESPONSIVE */
 footer {
   max-width: 1000px;
   margin: 30px auto 0;
