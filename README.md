@@ -1,9 +1,10 @@
-# Activity 2 - Basic Student Profile
+# Activity 3 - Basic Student Profile Responsiveness
 
-## Successful Basic Student Profile
+## Device: Phone
+![Screenshot4](Screenshot4.png)
 
-![Screenshot1](Screenshot1.png)
+## Device: Laptop/Desktop/Chrome
+![Screenshot5](Screenshot5.png)
 
-![Screenshot2](Screenshot2.png)
-
-![Screenshot3](Screenshot3.png)
+## Device: Tablet
+![Screenshot6](Screenshot6.png)
