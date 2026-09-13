@@ -51,12 +51,19 @@
 
 # Application Screenshots
 ## Device: Phone
+- Profile Page/Index/Home Page
 ![Phone Screenshot](Screenshot/PROFILE(HOME)_Phone.png)
 
 ## Device: Laptop/Desktop/Chrome
+- Projects Page
 ![Desktop Screenshot](Screenshot/PROJECTS_Desktop.png)
+
+- Skills Page
 ![Desktop Screenshot](Screenshot/SKILLS_Desktop.png)
 
 ## Device: Tablet
+- About Page
 ![Tablet Screenshot](Screenshot/ABOUTME_Tablet.png)
+
+- Contact Page
 ![Tablet Screenshot](Screenshot/CONTACT_Tablet.png)
