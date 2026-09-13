@@ -28,6 +28,7 @@
 * **Visual Hierarchy:**
   - Primary information is kept distinct from supporting details using clear typography scaling.
   - Main titles feature the largest font size, followed by subtitles, with body content styled in smaller, readable text.
+  - Interactive elements provide clear visual feedback, such as the submit button highlighting in green when hovered over to signal readiness for submission.
 
 * **Usability:**
   - Users always know where they are because the active navigation link uses a brighter, whiter color contrast than the rest of the navigation menu.
