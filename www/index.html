@@ -3,89 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Student Profile</title>
-    <link rel="stylesheet" href="css/index.css">
+    <title>Profile - Homepage</title>
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
 
 <header>
-    <div class="profile-frame">
-        <img src="img/img.png" alt=" ">
-    </div>
     <h1>Abegail P. Cailing</h1>
     <div class="subtitle">Personal Profile</div>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <nav class="navbar">
+        <a href="index.html" class="active">PROFILE</a>
+        <a href="about.html">ABOUT</a>
+        <a href="skills.html">SKILLS</a>
+        <a href="projects.html">PROJECT</a>
+        <a href="contact.html">CONTACT</a>
     </nav>
 </header>
 
-<div class="container">
+<main class="container">
 
-    <main>
-        <section id="about" class="content-card">
-            <h2 class="section-title">About Myself</h2>
-            <p>
-                I am Abegail P. Cailing, a 20yrs old, Information Technology student at Xavier University. I completed my elementary education at Binitinan Elementary School and graduated from St. Rita's College of Balingasag for my junior and senior high school years. Originally I started as a Computer Science student then I later shifted to Information Technology.
-            </p>
-            <br>
-            <p>
-                My college journey has been a time of exploring and discovering what I really want to pursue. Then I developed an interest in web designing. So, I decided to shift to BS Information Technology to become more closer to what I really want to pursue and to further develop my knowledge and skills. Aspiring to be a Web Developer.
-            </p>
-        </section>
+    <aside class="profile-card">
+        <div class="avatar-container">
 
-        <section id="skills" class="content-card">
-            <h2 class="section-title">Skills</h2>
-            <ul class="sidebar-list" style="display: flex; flex-direction: column; gap: 12px;">
-                <li><strong>HTML & CSS:</strong> Creating clean, responsive web pages and structured layouts.</li>
-                <li><strong>SQL & Databases:</strong> Managing data efficiently using relational databases.</li>
-                <li><strong>Development Tools:</strong> Coding and debugging in VS Code, PyCharm, and Packet Tracer.</li>
-                <li><strong>Adaptability:</strong> Learning new technologies quickly and adjusting to different project requirements.</li>
-                <li><strong>Time Management & Adaptability:</strong> Balancing coursework, meeting deadlines, and quickly learning new technologies.</li>
-            </ul>
-        </section>
-    </main>
-
-    <aside id="contact">
-        <div class="sidebar-widget">
-            <h3>Contact Me</h3>
-            <div class="subtitle"></div>
-
-            <form class="contact-form">
-                <ul class="sidebar-list">
-                    <li><strong>ID:</strong> 20240030884</li>
-                    <li><strong>Phone Number:</strong> 09692812840</li>
-                    <li><strong>Email:</strong> 20240030884@my.xu.edu.ph</li>
-
-                    <!-- UPDATED CLASS AND WRAPPER -->
-                    <li class="form-subtitle">You can send me a message here.</li>
-
-                    <li class="field">
-                        <label for="email"><strong>Email:</strong></label>
-                        <input type="email" id="email" placeholder="Enter your email" required>
-                    </li>
-
-                    <li class="field">
-                        <label for="message"><strong>Message:</strong></label>
-                        <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
-                    </li>
-                </ul>
-
-                <div class="field-btn">
-                    <button type="submit">Submit</button>
-                </div>
-            </form>
+            <img src="./img/profile.png" alt="Abegail P. Cailing" class="avatar">
+        </div>
+        <div class="profile-details">
+            <p><strong>Name:</strong> Abegail P. Cailing</p>
+            <p><strong>Course:</strong> BSIT &ndash; 3<sup>rd</sup> Year</p>
+            <p><strong>ID:</strong> 20240030884</p>
+            <p><strong>School:</strong> Xavier University</p>
+            <p class="tagline"><strong>Tagline:</strong> &ldquo;Food is Life&rdquo;</p>
         </div>
     </aside>
 
-</div>
+    <section class="content-card">
+        <h2>Brief Description About Me...</h2>
+        <p class="description">
+            Hello! I’m Abegail P. Cailing, a BSIT student with a background in STEM and a deep interest in art, design, and web technology. My journey into IT stems from a desire to create and design that has a functional system.
+        </p>
+
+        <p class="read-more">
+            <a href="about.html">more about me...</a>
+        </p>
+
+        <div class="quick-links">
+            <h3>Learn More About Me</h3>
+            <ul>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Project</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </section>
+</main>
 
 <footer>
-    <p>&copy; 2026 Abegail P. Cailing. All rights reserved.</p>
+    <p>@ 2026 Abegail P. Cailing. All rights reserved.</p>
 </footer>
 
 </body>
