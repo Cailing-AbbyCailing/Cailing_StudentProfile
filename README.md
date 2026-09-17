@@ -1,7 +1,7 @@
-# Activity 4 - Multi-Page Student Profile
+# Activity 5 - Student Profile Editing & Local Data Storage
 
 # Project Description
-- The Multi-Page Student Profile is a cross-platform application built using Apache Cordova, HTML and CSS. It serves as an interactive digital portfolio displaying student information, background details, technical skills, past projects, and contact channels in a structured and user-friendly interface.
+- The Multi-Page Student Profile is a cross-platform application built using Apache Cordova, HTML and CSS. It serves as an interactive digital portfolio displaying student information, background details, technical skills, past projects, and contact channels in a structured and user-friendly interface. Including profile editing and local data storage features, allowing users to update selected profile information and keep their changes saved even after refreshing or reopening the application.
 
 # Application Pages
 * **Profile (Homepage / index.html):** The main landing page that introduces the student with a brief overview, profile card, and quick links to navigate to other sections but can also utilize the links in the navigation part to access the other pages.
@@ -10,32 +10,19 @@
 * **Projects (project.html):** Highlights past projects with the project title, its brief descriptions, role/contribution and the technologies/tools used on those projects.
 * **Contact (contact.html):** Contains contact information (email, social links, forms) to allow visitors to send a message.
 
-# Navigation 
-- Navigation throughout the application is implemented using traditional HTML hyper-links (`` tags) organized within structured navigation menus and quick-link lists across every page. This allows smooth transitions between index.html(home/profile), `about.html`, `skills.html`, `project.html`, and `contact.html` without requiring single-page application.
+# Profile Editing
+ - The Edit Profile feature that can be seen in the homepage allows users to update their profile information without reloading the page. When the Edit Profile button is clicked, a pop-up form appears and automatically shows the user's current profile information. Users then can edit their details using the form. When Save Profile is clicked, the system checks if the required fields are filled in. The updated information is then saved in localStorage and displayed on the profile page.
+ - Modifying the full name, course, year level, about me description/bio, and the summary skills put in the home page/profile page.
 
-# Responsive Design
-- The application utilizes responsive CSS techniques (including Flexbox, Grid, and Media Queries) to ensure content resizes, shrinks, and stacks cleanly across different devices:
-* **Desktop:** Displays wide multi-column layouts where elements like project images and descriptions sit side-by-side.
-* **Tablet:** Content automatically shrinks and re-aligns to fit medium-sized screens while keeping spacing and typography balanced.
-* **Mobile:** Multi-column layouts dynamically collapse into a single-column view. For instance, on the **Projects page**, the layout automatically adjusts on mobile screens so that project descriptions stack directly underneath their corresponding pictures for optimal readability and vertical scrolling.
+# JavaScript Functionality
+ - Form handling: "editForm.addEventListener('submit', saveProfile)" is used form handling, to handle form submissions and prevents the page from refreshing the default page using "event.preventDefault()".
+ - Validation: ".trim()" is used to check the validation of the input required to be filled by the user, then it displays an error message and doesn't allow to submit it if any of the fields are empty.
+ - Profile Updates: it replaces the content that is in "textContent" with the stored profile with the code "loadProfile()".
+ - Save: using this code, it gathers the inputted data into an "updateProfile" object to save in the "localstorage.setItem()" and then it updates the interface after it is submitted.
+ - Cancel: it closes the edit popup without saving changes by applying a .hidden CSS class through closeModal().
 
-
-# UI/UX Principles Applied
-* **Consistency:**
-  - Maintained a uniform color scheme, typography, navigation bar, spacing, and visual styling across all pages.
-  - Designed matching visual layouts for related sections: the Intro, About, and Skills pages follow the same structured card layout, while the Profile and Contact pages share a complementary layout design.
-
-* **Visual Hierarchy:**
-  - Primary information is kept distinct from supporting details using clear typography scaling.
-  - Main titles feature the largest font size, followed by subtitles, with body content styled in smaller, readable text.
-  - Interactive elements provide clear visual feedback, such as the submit button highlighting in green when hovered over to signal readiness for submission.
-
-* **Usability:**
-  - Users always know where they are because the active navigation link uses a brighter, whiter color contrast than the rest of the navigation menu.
-  - Page content is immediately recognizable, and next navigation steps are always visible.
-
-* **Readability:**
-  - Typography dynamically scales and adapts across different device screens (desktop, tablet, mobile) to ensure comfortable reading without manual zooming.
+# Local Data Storage
+ - Local Data Storage is like a small storage box inside, making the data saved even if the user refreshes the page or closes the app. In which, "getItem returns null" means it loads the apps data from defaultProfile. Then, "setItem saves { fullName: "Abby", ... }" is then converted into a string inside browser/app storage. After that, when the user refresh or reopens the app or the browser the getItem will then loads the new updated data from the localStorage automatically.
 
 # How to Run
  1. Node.js to install on the system.
@@ -51,20 +38,17 @@
 6. Click on the `MainActivity.java` tab and press the green **Run (Play)** button located in the top bar to build and launch the application on the running device.
 
 # Application Screenshots
-## Device: Phone
+## Device: Tablet
 - Profile Page/Index/Home Page
-![Phone Screenshot](Screenshot/PROFILE(HOME)_Phone.png)
+![Tablet Screenshot](Screenshot/Profile.png)
 
 ## Device: Laptop/Desktop/Chrome
-- Projects Page
-![Desktop Screenshot](Screenshot/PROJECTS_Desktop.png)
+- Edit
+![Desktop Screenshot](Screenshot/EDIT.png)
 
-- Skills Page
-![Desktop Screenshot](Screenshot/SKILLS_Desktop.png)
+- Update 
+![Desktop Screenshot](Screenshot/UPDATE.png)
 
-## Device: Tablet
-- About Page
-![Tablet Screenshot](Screenshot/ABOUTME_Tablet.png)
-
+## Device: Phone
 - Contact Page
-![Tablet Screenshot](Screenshot/CONTACT_Tablet.png)
+![Phone Screenshot](Screenshot/Contact.png)

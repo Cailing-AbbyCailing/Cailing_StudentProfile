@@ -15,7 +15,6 @@ body {
   padding: 30px 20px;
 }
 
-/* HEADER */
 header {
     width: 100%;
     max-width: 1000px;
@@ -23,13 +22,18 @@ header {
     flex-direction: column;
     align-items: center;
     text-align: center;
+
+
     background-color: rgba(255, 255, 255, 0.08);
     border-radius: 20px;
     padding: 18px 25px;
+
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.30);
+
     margin-bottom: 30px;
 }
 
@@ -46,7 +50,7 @@ header .subtitle {
     color: #d1c4e9;
 }
 
-/* NAVIGATION */
+/* Navigation Bar */
 .navbar {
     background-color: transparent;
     border-radius: 0;
@@ -93,7 +97,6 @@ header .subtitle {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
 }
 
-/* LEFT PROFILE */
 .profile-card {
     width: 320px;
     flex-shrink: 0;
@@ -128,7 +131,6 @@ header .subtitle {
     display: block;
 }
 
-/* PROFILE */
 .profile-details {
     width: 100%;
     font-size: 0.95rem;
@@ -144,7 +146,7 @@ header .subtitle {
     font-size: 1.05rem;
 }
 
-/* RIGHT MAIN CONTENT */
+/* RIGHT MAIN CONTENT CARD */
 .content-card {
     flex-grow: 1;
     background: none;
@@ -182,7 +184,6 @@ header .subtitle {
     color: #d1c4e9;
 }
 
-/* QUICK LINKS */
 .quick-links h3 {
     font-size: 1.3rem;
     font-weight: 600;
@@ -207,6 +208,142 @@ header .subtitle {
     color: #d1c4e9;
 }
 
+/* EDIT PROFILE */
+.edit-btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  color: #1a0826;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.edit-btn:hover {
+  background-color: #d1c4e9;
+  transform: translateY(-2px);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.modal-overlay.hidden {
+  display: none;
+}
+
+.modal-content {
+  background-color: #2a113b;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #d1c4e9;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #a970ff;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Validation Feedback */
+.error-msg {
+  background-color: rgba(255, 85, 85, 0.2);
+  border: 1px solid #ff5555;
+  color: #ff8888;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+}
+
+.error-msg.hidden {
+  display: none;
+}
+
+/* Modal Buttons */
+.modal-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.save-btn, .cancel-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.save-btn {
+  background-color: #90ee90;
+  color: #000000;
+}
+
+.cancel-btn {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.save-btn:hover {
+  opacity: 0.85;
+}
+
+.cancel-btn:hover {
+  background-color: rgba(255, 99, 71, 0.3);
+  border-color: #ff6b6b;
+  color: #ff8888;
+}
+
 /* CONTACT PAGE */
 .single-combined-card {
     width: 100%;
@@ -221,7 +358,7 @@ header .subtitle {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
 }
 
-/* LEFT SIDE */
+/* SOCIALS LEFT */
 .left-col {
     width: 300px;
     flex-shrink: 0;
@@ -231,17 +368,14 @@ header .subtitle {
     padding-right: 35px;
 }
 
-
-/* Socials Heading */
 .socials-heading {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
-/* Social Links */
 .social-links {
-    text-align: center;
+    text-align: left;
     font-size: 0.9rem;
     width: 100%;
 }
@@ -250,10 +384,6 @@ header .subtitle {
     margin-top: 15px;
     margin-bottom: 4px;
     font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
 }
 
 .social-links a {
@@ -262,7 +392,6 @@ header .subtitle {
     word-break: break-all;
     text-decoration: underline;
     font-size: 0.85rem;
-    text-align: center;
     transition: color 0.2s ease;
 }
 
@@ -270,13 +399,12 @@ header .subtitle {
     color: #d1c4e9;
 }
 
-/* Social Icons */
+/* SOCIAL ICONS */
 .social-links i {
     margin-right: 8px;
     font-size: 1.2rem;
 }
 
-/* Social Media Logo Colors */
 .social-links .fa-envelope {
     color: #EA4335;
 }
@@ -293,7 +421,7 @@ header .subtitle {
     color: #A970FF;
 }
 
-/* RIGHT SIDE */
+/* RIGHT SIDE CONTACT */
 .right-col {
     flex-grow: 1;
     padding-left: 35px;
@@ -306,7 +434,7 @@ header .subtitle {
     margin-bottom: 20px;
 }
 
-/* contact form */
+/* CONTACT FORM */
 .subtitle {
     margin-top: -10px;
     margin-bottom: 25px;
@@ -348,7 +476,6 @@ header .subtitle {
     resize: vertical;
 }
 
-/* SUBMIT BUTTON */
 .submit-btn {
     width: 100%;
     background-color: #ffffff;
@@ -372,7 +499,7 @@ header .subtitle {
     transform: translateY(-2px);
 }
 
-/* ABOUT ME PAGE */
+/* ABOUT ME */
 .single-card-container {
   display: flex;
   justify-content: center;
@@ -390,16 +517,18 @@ header .subtitle {
   width: 100%;
   max-width: 1000px;
   min-height: auto;
+
   background-color: rgba(255, 255, 255, 0.08);
   border-radius: 25px;
   padding: 35px 30px;
+
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
 }
 
-/* ABOUT ME TITLE */
 .main-page-title {
   font-size: 2rem !important;
   font-weight: 800 !important;
@@ -425,7 +554,6 @@ header .subtitle {
   border-bottom: 2px solid rgba(255, 255, 255, 0.35);
 }
 
-/* Introduction paragraph */
 .introduction-text {
   font-size: 1.15rem;
   line-height: 1.7;
@@ -435,6 +563,7 @@ header .subtitle {
   opacity: 0.95;
 }
 
+/* OTHER */
 .full-width-card h2:not(.introduction-title) {
   font-size: 1.5rem !important;
   font-weight: 700 !important;
@@ -444,17 +573,14 @@ header .subtitle {
   margin-bottom: 10px !important;
 }
 
-/* Paragraphs under other sections */
 .about-text {
   font-size: 1.05rem;
   line-height: 1.5;
   margin-bottom: 20px;
-
   opacity: 0.95;
 }
 
-
-/* PROJECTS PAGE */
+/* PROJECT PAGE */
 .project-item {
     display: flex;
     align-items: flex-start;
@@ -462,7 +588,6 @@ header .subtitle {
     margin-bottom: 45px;
 }
 
-/* PROJECT IMAGE */
 .project-image-container {
     width: 320px;
     height: 200px;
@@ -478,28 +603,23 @@ header .subtitle {
     display: block;
 }
 
-/* PROJECT DETAILS */
 .project-details {
     flex: 1;
     margin: 0;
     padding: 0;
 }
 
-/* Project Title */
 .full-width-card .project-details h2 {
     font-size: 1.4rem !important;
     font-weight: 600 !important;
     line-height: 1.2 !important;
     text-align: left !important;
-
     margin-top: 0 !important;
     margin-bottom: 10px !important;
-
     padding: 0 !important;
     border: none !important;
 }
 
-/* Project Description and Information */
 .project-details p {
     margin: 0 0 8px 0;
     padding: 0;
@@ -507,7 +627,6 @@ header .subtitle {
     line-height: 1.5;
 }
 
-/* Bold Labels */
 .project-details strong {
     font-weight: 700;
     color: #ffffff;
@@ -518,7 +637,6 @@ header .subtitle {
     font-weight: 700;
 }
 
-/* FOOTER */
 footer {
     width: 100%;
     max-width: 1000px;
@@ -526,13 +644,10 @@ footer {
     margin-top: 40px;
     padding: 20px;
     text-align: center;
-
     background-color: rgba(255, 255, 255, 0.08);
     border-radius: 20px;
-
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
 }

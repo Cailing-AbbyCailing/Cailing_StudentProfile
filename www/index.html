@@ -25,21 +25,24 @@
 
     <aside class="profile-card">
         <div class="avatar-container">
-
             <img src="./img/profile.png" alt="Abegail P. Cailing" class="avatar">
         </div>
         <div class="profile-details">
-            <p><strong>Name:</strong> Abegail P. Cailing</p>
-            <p><strong>Course:</strong> BSIT &ndash; 3<sup>rd</sup> Year</p>
+            <p><strong>Name:</strong> <span id="display-name">Abegail P. Cailing</span></p>
+            <p><strong>Course:</strong> <span id="display-course">BSIT</span> &ndash; <span id="display-year">3rd Year</span></p>
             <p><strong>ID:</strong> 20240030884</p>
             <p><strong>School:</strong> Xavier University</p>
             <p class="tagline"><strong>Tagline:</strong> &ldquo;Food is Life&rdquo;</p>
+            <p><strong>Skills:</strong> <span id="display-skills">HTML, CSS, JavaScript, Design</span></p>
         </div>
+
+        <button id="edit-profile-btn" class="edit-btn">Edit Profile</button>
     </aside>
 
     <section class="content-card">
         <h2>Brief Description About Me...</h2>
-        <p class="description">
+        <!-- Note the id="display-about" below -->
+        <p class="description" id="display-about">
             Hello! I’m Abegail P. Cailing, a BSIT student with a background in STEM and a deep interest in art, design, and web technology. My journey into IT stems from a desire to create and design that has a functional system.
         </p>
 
@@ -58,9 +61,49 @@
     </section>
 </main>
 
+<div id="edit-modal" class="modal-overlay hidden">
+    <div class="modal-content">
+        <h2>Edit Profile</h2>
+        <div id="error-message" class="error-msg hidden"></div>
+
+        <form id="edit-profile-form">
+            <div class="form-group">
+                <label for="input-name">Full Name *</label>
+                <input type="text" id="input-name" placeholder="Enter full name">
+            </div>
+
+            <div class="form-group">
+                <label for="input-course">Course *</label>
+                <input type="text" id="input-course" placeholder="e.g., BSIT">
+            </div>
+
+            <div class="form-group">
+                <label for="input-year">Year Level *</label>
+                <input type="text" id="input-year" placeholder="e.g., 3rd Year">
+            </div>
+
+            <div class="form-group">
+                <label for="input-about">About Me *</label>
+                <textarea id="input-about" rows="4" placeholder="Brief description..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="input-skills">Skills</label>
+                <input type="text" id="input-skills" placeholder="e.g., HTML, CSS, JavaScript">
+            </div>
+
+            <div class="modal-actions">
+                <button type="submit" class="save-btn">Save</button>
+                <button type="button" id="cancel-btn" class="cancel-btn">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
 <footer>
-    <p>@ 2026 Abegail P. Cailing. All rights reserved.</p>
+    <p>&copy; 2026 Abegail P. Cailing. All rights reserved.</p>
 </footer>
 
+<script src="./js/index.js"></script>
 </body>
 </html>
