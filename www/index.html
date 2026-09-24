@@ -23,10 +23,17 @@
 
 <main class="container">
 
-    <aside class="profile-card">
-        <div class="avatar-container">
-            <img src="./img/profile.png" alt="Abegail P. Cailing" class="avatar">
+    <aside class="profile-card">cordova build android
+        <!-- Avatar and Button Wrapper -->
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 15px;">
+            <div class="avatar-container" id="avatar-container" title="Click to change profile picture">
+                <img id="profile-avatar" src="./img/profile.png" alt="Abegail P. Cailing" class="avatar">
+            </div>
+
+            <!-- Change Picture Button directly below photo -->
+            <button id="change-photo-btn" style="background-color: #ffffff; color: #1a102f; border: none; padding: 8px 14px; border-radius: 20px; font-weight: bold; font-size: 0.8rem; cursor: pointer;">Change Profile Picture</button>
         </div>
+
         <div class="profile-details">
             <p><strong>Name:</strong> <span id="display-name">Abegail P. Cailing</span></p>
             <p><strong>Course:</strong> <span id="display-course">BSIT</span> &ndash; <span id="display-year">3rd Year</span></p>
@@ -104,6 +111,7 @@
     <p>&copy; 2026 Abegail P. Cailing. All rights reserved.</p>
 </footer>
 
+<script src="cordova.js"></script>
 <script src="./js/index.js"></script>
 </body>
 </html>

@@ -22,18 +22,13 @@ header {
     flex-direction: column;
     align-items: center;
     text-align: center;
-
-
     background-color: rgba(255, 255, 255, 0.08);
     border-radius: 20px;
     padding: 18px 25px;
-
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.30);
-
     margin-bottom: 30px;
 }
 
@@ -111,17 +106,25 @@ header .subtitle {
     padding: 0 35px 0 0;
 }
 
+/* Avatar Styling */
 .avatar-container {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     border: 4px solid #ffffff;
     overflow: hidden;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 15px auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
+    cursor: default;
+    transition: none;
+}
+
+.avatar-container:hover {
+    transform: none;
+    box-shadow: none;
 }
 
 .avatar {
@@ -208,7 +211,7 @@ header .subtitle {
     color: #d1c4e9;
 }
 
-/* EDIT PROFILE */
+/* BUTTONS */
 .edit-btn {
   margin-top: 15px;
   width: 100%;
@@ -227,6 +230,20 @@ header .subtitle {
   transform: translateY(-2px);
 }
 
+.secondary-btn {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.secondary-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+/* EDIT PROFILE MODAL */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -292,7 +309,6 @@ header .subtitle {
   background-color: rgba(255, 255, 255, 0.15);
 }
 
-/* Validation Feedback */
 .error-msg {
   background-color: rgba(255, 85, 85, 0.2);
   border: 1px solid #ff5555;
@@ -307,7 +323,6 @@ header .subtitle {
   display: none;
 }
 
-/* Modal Buttons */
 .modal-actions {
   display: flex;
   gap: 15px;
@@ -358,7 +373,6 @@ header .subtitle {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
 }
 
-/* SOCIALS LEFT */
 .left-col {
     width: 300px;
     flex-shrink: 0;
@@ -399,7 +413,6 @@ header .subtitle {
     color: #d1c4e9;
 }
 
-/* SOCIAL ICONS */
 .social-links i {
     margin-right: 8px;
     font-size: 1.2rem;
@@ -421,7 +434,6 @@ header .subtitle {
     color: #A970FF;
 }
 
-/* RIGHT SIDE CONTACT */
 .right-col {
     flex-grow: 1;
     padding-left: 35px;
@@ -434,7 +446,6 @@ header .subtitle {
     margin-bottom: 20px;
 }
 
-/* CONTACT FORM */
 .subtitle {
     margin-top: -10px;
     margin-bottom: 25px;
@@ -488,9 +499,7 @@ header .subtitle {
     letter-spacing: 1px;
     cursor: pointer;
     margin-top: 10px;
-    transition:
-        transform 0.2s ease,
-        background-color 0.2s ease;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .submit-btn:hover {
@@ -517,14 +526,11 @@ header .subtitle {
   width: 100%;
   max-width: 1000px;
   min-height: auto;
-
   background-color: rgba(255, 255, 255, 0.08);
   border-radius: 25px;
   padding: 35px 30px;
-
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
 }
@@ -541,7 +547,6 @@ header .subtitle {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* INTRODUCTION */
 .introduction-title {
   font-size: 2.5rem !important;
   font-weight: 800 !important;
@@ -563,7 +568,6 @@ header .subtitle {
   opacity: 0.95;
 }
 
-/* OTHER */
 .full-width-card h2:not(.introduction-title) {
   font-size: 1.5rem !important;
   font-weight: 700 !important;
