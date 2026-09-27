@@ -75,6 +75,11 @@ bash
 6. The APK will be generated in: platforms/android/app/build/outputs/apk/debug/app-debug.apk
 7. Transfer the APK to an Android device and install it to run the application.
 
+## Test Accounts
+For evaluation and testing purposes, use the following test account credentials to log in:
+- **Student ID:** 20240030884
+- **Password:** 123456
+
 # Application Screenshots
 ![External Screenshot](Screenshot/NEWREGISTEREDACC.png)
 
@@ -97,5 +102,5 @@ bash
 ![External Screenshot](Screenshot/LOGOUT.png)
 
 ## Database Related
-![External Screenshot](Screenshot/database.png)
+![External Screenshot](Screenshot/data.png)
 
