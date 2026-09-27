@@ -5,8 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile - Homepage</title>
     <link rel="stylesheet" href="./css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
+
+<!-- LOGIN SCREEN -->
+<div id="login-screen" class="login-screen">
+    <div class="login-container">
+        <h1>Student Portal</h1>
+        <p class="login-subtitle">Student Profile Login</p>
+
+        <div id="login-error" class="login-error"></div>
+
+        <form id="login-form">
+            <div class="form-group">
+                <label for="login-id">Student ID</label>
+                <input
+                        type="text"
+                        id="login-id"
+                        placeholder="e.g. 20240030884"
+                        required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="login-password">Password</label>
+                <input
+                        type="password"
+                        id="login-password"
+                        placeholder="Enter password"
+                        required
+                >
+            </div>
+
+            <button type="button" id="login-btn" class="login-btn">
+                Login
+            </button>
+        </form>
+
+        <button type="button" id="register-btn" class="register-btn">
+            Register New Student
+        </button>
+    </div>
+</div>
+
+<div id="profile-screen" style="display: none;">
 
 <header>
     <h1>Abegail P. Cailing</h1>
@@ -18,26 +61,27 @@
         <a href="skills.html">SKILLS</a>
         <a href="projects.html">PROJECT</a>
         <a href="contact.html">CONTACT</a>
+
+        <button id="logout-btn" type="button">
+            Logout
+        </button>
     </nav>
 </header>
 
 <main class="container">
 
-    <aside class="profile-card">cordova build android
-        <!-- Avatar and Button Wrapper -->
+    <aside class="profile-card">
         <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 15px;">
             <div class="avatar-container" id="avatar-container" title="Click to change profile picture">
                 <img id="profile-avatar" src="./img/profile.png" alt="Abegail P. Cailing" class="avatar">
             </div>
-
-            <!-- Change Picture Button directly below photo -->
             <button id="change-photo-btn" style="background-color: #ffffff; color: #1a102f; border: none; padding: 8px 14px; border-radius: 20px; font-weight: bold; font-size: 0.8rem; cursor: pointer;">Change Profile Picture</button>
         </div>
 
         <div class="profile-details">
             <p><strong>Name:</strong> <span id="display-name">Abegail P. Cailing</span></p>
             <p><strong>Course:</strong> <span id="display-course">BSIT</span> &ndash; <span id="display-year">3rd Year</span></p>
-            <p><strong>ID:</strong> 20240030884</p>
+            <p><strong>ID:</strong> <span id="display-student-id">20240030884</span></p>
             <p><strong>School:</strong> Xavier University</p>
             <p class="tagline"><strong>Tagline:</strong> &ldquo;Food is Life&rdquo;</p>
             <p><strong>Skills:</strong> <span id="display-skills">HTML, CSS, JavaScript, Design</span></p>
@@ -48,7 +92,6 @@
 
     <section class="content-card">
         <h2>Brief Description About Me...</h2>
-        <!-- Note the id="display-about" below -->
         <p class="description" id="display-about">
             Hello! I’m Abegail P. Cailing, a BSIT student with a background in STEM and a deep interest in art, design, and web technology. My journey into IT stems from a desire to create and design that has a functional system.
         </p>
@@ -110,6 +153,8 @@
 <footer>
     <p>&copy; 2026 Abegail P. Cailing. All rights reserved.</p>
 </footer>
+
+</div>
 
 <script src="cordova.js"></script>
 <script src="./js/index.js"></script>

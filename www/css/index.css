@@ -76,6 +76,125 @@ header .subtitle {
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
+/* =========================
+   LOGIN SCREEN
+   ========================= */
+
+.login-screen {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #1a0826;
+    box-sizing: border-box;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 35px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 25px;
+    backdrop-filter: blur(12px);
+    box-sizing: border-box;
+}
+
+.login-container h1 {
+    text-align: center;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.login-subtitle {
+    text-align: center;
+    color: #ddd;
+    margin-bottom: 25px;
+}
+
+.login-container .form-group {
+    margin-bottom: 18px;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 7px;
+    color: white;
+    font-weight: bold;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.login-btn,
+.register-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.login-btn {
+    background: white;
+    color: #1a0826;
+}
+
+.login-btn:hover {
+    background: #90EE90;
+}
+
+.register-btn {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+.register-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.login-error {
+    color: #ff6b6b;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+    min-height: 20px;
+}
+
+/* Logout Button Styling to Match Navbar Links */
+.navbar #logout-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 0.8rem;
+    letter-spacing: 0.4px;
+    opacity: 0.8;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.navbar #logout-btn:hover {
+    color: #ffffff;
+    opacity: 1;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+
 /* MAIN CONTENT */
 .container {
     display: flex;
